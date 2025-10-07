@@ -17,5 +17,11 @@ def main():
     render_header()
     asin, geo, domain = render_inputs()
 
+    if st.button("Scrape product") and asin:
+        with st.spinner("Scraping product..."):
+            st.write("Scrape")
+            # TODO: scrape product
+        st.success("Product scraped successfully!")
+
 if __name__ == "__main__":
     main()
