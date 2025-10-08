@@ -10,7 +10,7 @@ class Database:
         self.db = TinyDB(db_path)
         self.products = self.db.table("products")
 
-    def insert_products(self, product_data):
+    def insert_product(self, product_data):
         product_data["created_at"] = datetime.now().isoformat()
         return self.products.insert(product_data)
 
