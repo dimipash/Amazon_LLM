@@ -1,6 +1,6 @@
 import streamlit as st
 from src.db import Database
-from src.oxylabs_client import scrape_product_details
+from src.oxylabs_client import scrape_product_details, search_competitors, scrape_multiple_products
 
 
 def scrape_and_store_product(asin, geo_location, domain):
